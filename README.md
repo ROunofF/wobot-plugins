@@ -8,11 +8,13 @@ Steps to install wobot and plugins
  - install wobot (npm install wobot)
  - clone this repository to the desired directory
 
-To include a plugin in your bot use bot.loadPlugin();
+To include a plugin in your bot use bot.loadPlugin(); The first parameter is its name, and the second is a require() with the relative path to the file.
 
     bot.loadPlugin('response', require('./plugins/response'));
     
-Make sure to replace user id, password, and your room with your login info from http://hipchat.com).
+Some of my plugins use an API, and require the node module, request, which allows getting data rom external APIs. To install it, run the following command
+
+    npm install request
 
 Once this is all complete, run the following command in a terminal to launch your bot!
 
