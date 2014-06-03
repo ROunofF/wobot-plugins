@@ -5,6 +5,7 @@
  * and the response to the array!
  */
 
+//responses and their keys. add more here if you'd like
 var responses = {
 	'cookie':'I LOVE COOKIES!!!',
 	'ping':'pong',
