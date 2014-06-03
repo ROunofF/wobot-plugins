@@ -13,7 +13,7 @@ This repository contains plugins for wobot, a hipchat bot written in Node.js by 
 
 ## Install Nodejs and NPM
 
-Visit the [node.js downloads page](http://nodejs.org/) and the [NPM downloads page](https://www.npmjs.org/) to download and install the correct versions fo Node.js and NPM for your system.
+Visit the [node.js downloads page](http://nodejs.org/) to download and install the correct version of Node.js for your system.
 
 To install node.js and node package manager on Ubuntu, simply enter the following commands in a terminal
 
