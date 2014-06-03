@@ -5,7 +5,6 @@
  * and the response to the array!
  */
 
-//responses and their keys. add more here if you'd like
 var responses = {
 	'cookie':'I LOVE COOKIES!!!',
 	'ping':'pong',
@@ -19,10 +18,15 @@ module.exports.load = function(bot) {
 };
 
 var respond = function(channel, from, message) {
-	if (responses[message] != undefined) {
-		var self = this;
-  		self.message(channel, '@' + from.split(' ').join('') +  ' ' + responses[message]);
-  		console.log(channel + ' : @' + from.split(' ').join('') + ' ' + responses[message])
+	var messageSplit = message.split(' ');
+	for ( var i = 0; i < messageSplit.length; i++) {
+		var word = messageSplit[i];
+		if (responses[word] != undefined) {
+			var keyword = responses[messageSplit[i]];
+			var self = this;
+	  		self.message(channel, '@' + from.split(' ').join('') +  ' ' + keyword);
+	  		console.log(channel + ' : @' + from.split(' ').join('') + ' ' + keyword);
+		}
 	}
   return true;
 };
