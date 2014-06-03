@@ -21,3 +21,24 @@ Once this is all complete, run the following command in a terminal to launch you
     node bot.js
 
 As always, feel free to fork, add your own plugins, and submit pull requests. It would be really sweet to get an entire library of wobot plugins going
+
+Example bot with all of my plugins installed :)
+
+```
+var Bot = require('wobot').Bot;
+
+var bot = new Bot({
+  jid: 'user_id@chat.hipchat.com/bot',
+  password: 'password',
+});
+
+bot.connect();
+
+bot.onConnect(function() {
+	this.join('your_room@conf.hipchat.com');
+});
+
+bot.loadPlugin('response', require('./plugins/response'));
+bot.loadPlugin('chuckjokes', require('./plugins/chuckjokes'));
+bot.loadPlugin('yomama', require('./plugins/yomama'));
+```
