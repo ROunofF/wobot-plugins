@@ -7,6 +7,7 @@
 
 var responses = {
 	'cookie':'I LOVE COOKIES!!!',
+	'cookies':'I LOVE COOKIES!!!',
 	'ping':'pong',
 	'fireworks':'*pow *boom FIREWOKS!!!',
 	'wat':'Turn down for what?!',

@@ -14,7 +14,7 @@ var chuckJoke = function(channel, from) {
   request('http://api.icndb.com/jokes/random', function (error, response, body) {
     if (!error) {
       var data = JSON.parse(body);
-      var string = '@' + from.split(' ').join('') + ' ' + data.value.joke;
+      var string = '@' + from.split(' ').join('') + ' ' + data.value.joke.replace('&quot;', '"');
       self.message(channel, string);
       console.log(string);
     }
