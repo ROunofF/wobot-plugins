@@ -1,9 +1,9 @@
 Wobot-Plugins
 =============
 
-This repository contains plugins for wobot, a hipchat bot written in Node.js by [cjoudrey](http://github.com/cjoudrey)
+This repository contains plugins for wobot, a hipchat bot written in Node.js by [cjoudrey](http://github.com/cjoudrey). If you would like to contribute your own plugins, simply create a fork, add your plugins, and submit a pull request!
 
-Steps to install create your very own wobot!
+#Steps to create your own wobot!
  - [install node.js and npm](README.md#install-nodejs-and-npm)
  - [install wobot and other modules](README.md#install-wobot-and-other-modules)
  - [create your own bot!](README.md#create-your-own-bot)
