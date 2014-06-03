@@ -4,16 +4,16 @@ Wobot-Plugins
 This repository contains plugins for wobot, a hipchat bot written in Node.js by [cjoudrey](http://github.com/cjoudrey)
 
 Steps to install create your very own wobot!
- - [install node.js](README.md#install-node.js)
+ - [install node.js and npm](README.md#install-nodejs-and-npm)
  - [install wobot and other modules](README.md#install-wobot-and-other-modules)
  - [create your own bot!](README.md#create-your-own-bot)
  - [configure your bot](README.md#configuring-your-bot)
  - [load plugins](README.md#load-plugins)
  - [run your bot](README.md#run-your-bot)
 
-## Install Node.js
+## Install Nodejs and NPM
 
-Visit the [node.js downloads page](http://nodejs.org/) to download and install the correct version for your system.
+Visit the [node.js downloads page](http://nodejs.org/) and the [NPM downloads page](https://www.npmjs.org/) to download and install the correct versions fo Node.js and NPM for your system.
 
 To install node.js and node package manager on Ubuntu, simply enter the following commands in a terminal
 
