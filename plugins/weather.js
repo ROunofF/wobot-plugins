@@ -16,12 +16,16 @@ var weather = function(channel, from, message, matches) {
     if (!error) {
       var data = JSON.parse(body);
       var results = data.query.results.channel;
-      var condition = results.item.condition;
-      var forecast = results.item.forecast[0];
-      var location = results.location;
-      var response = 'It is currently ' + condition.temp + '° and ' + condition.text + ' in ' + location.city + ', ' + location.region + '.\nToday\'s Forecast: ' + forecast.high + '° high, ' + forecast.low + '° low, ' + forecast.text;
-      self.message(channel, '@' + from.split(' ').join('') + ' ' + response);
-      console.log('@' + from.split(' ').join('') + ' ' + response);
+      if (results.title == 'Yahoo! Weather - Error') {
+        self.message(channel, '@' + from.split(' ').join('') + ' Invalid input. Please enter a valid ZIPCODE (Ex: \'!weather 68508\')');
+      } else {
+        var condition = results.item.condition;
+        var forecast = results.item.forecast[0];
+        var location = results.location;
+        var response = 'It is currently ' + condition.temp + '° and ' + condition.text + ' in ' + location.city + ', ' + location.region + '.\nToday\'s Forecast: ' + forecast.high + '° high, ' + forecast.low + '° low, ' + forecast.text;
+        self.message(channel, '@' + from.split(' ').join('') + ' ' + response);
+      }
+      
     }
   });
   return true;
