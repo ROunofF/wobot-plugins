@@ -56,6 +56,11 @@ bot.onConnect(function() {
 	this.join('your_room@conf.hipchat.com');
 });
 
+bot.onError(function(text) {
+	var log = fs.createWriteStream('log.txt', {'flags': 'a'});
+	log.write(new Date().toString() + ': ERROR: ' + text + '\n');
+});
+
 bot.loadPlugin('response', require('./plugins/response'));
 ```
 
