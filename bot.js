@@ -4,6 +4,7 @@
  */
 
 var Bot = require('wobot').Bot;
+var fs = require('fs');
 
 var bot = new Bot({
   jid: 'user_id@chat.hipchat.com/bot',
@@ -13,6 +14,12 @@ var bot = new Bot({
 bot.connect();
 
 bot.onConnect(function() {
-	this.join('your_room@conf.hipchat.com');
+  this.join('your_room@conf.hipchat.com');
+}
+
+bot.onError(function(text) {
+	var log = fs.createWriteStream('log.txt', {'flags': 'a'});
+	log.write(new Date().toString() + ': ERROR: ' + text + '\n');
+});
 
 bot.loadPlugin('response', require('./plugins/response'));
