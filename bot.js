@@ -15,7 +15,7 @@ bot.connect();
 
 bot.onConnect(function() {
   this.join('your_room@conf.hipchat.com');
-}
+});
 
 bot.onError(function(text) {
 	var log = fs.createWriteStream('log.txt', {'flags': 'a'});
