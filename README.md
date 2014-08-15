@@ -26,7 +26,7 @@ To install wobot and other modules required by the plugins, we will use node pac
 
     npm install wobot
     
-Some of my plugins use an API, and require the node module, request, which allows getting data rom external APIs. To install it, run the following command
+Some of my plugins use an API, and require the node module, request, which allows getting data from external APIs. To install it, run the following command
 
     npm install request
     
