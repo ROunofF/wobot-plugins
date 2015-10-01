@@ -8,9 +8,11 @@ var request = require('request');
 
 module.exports.load = function(bot) {
   bot.onMessage(/^\!weather ([0-9]+)$/i, weather);
+  bot.onPrivateMessage(/^\!weather ([0-9]+)$/i, weather);
 };
 
 var weather = function(channel, from, message, matches) {
+	console.log('Message' + message);
   var self = this;
   request('http://query.yahooapis.com/v1/public/yql/jonathan/weather?format=json&zip=' + matches[1], function (error, response, body) {
     if (!error) {

@@ -19,6 +19,7 @@ module.exports.load = function(bot) {
 };
 
 var respond = function(channel, from, message) {
+	console.log('Got message ' + message);
 	var messageSplit = message.split(' ');
 	for ( var i = 0; i < messageSplit.length; i++) {
 		var word = messageSplit[i];
@@ -28,6 +29,9 @@ var respond = function(channel, from, message) {
 	  		self.message(channel, '@' + from.split(' ').join('') +  ' ' + keyword);
 	  		console.log(channel + ' : @' + from.split(' ').join('') + ' ' + keyword);
 		}
+	}
+	if( from == 'Guylain Carrier') {
+		this.message(channel, 'Trop de photes me donne la berlue!');
 	}
   return true;
 };

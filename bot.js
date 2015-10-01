@@ -3,18 +3,21 @@
  * to match your user and room.
  */
 
+
 var Bot = require('wobot').Bot;
 var fs = require('fs');
 
-var bot = new Bot({
-  jid: 'user_id@chat.hipchat.com/bot',
-  password: 'password',
-});
+
+  //"jid": "76745_989081@chat.hipchat.com/nubot",
+var conf    = fs.readFileSync('./conf/bot.json');
+var opts    = JSON.parse(conf);
+
+var bot = new Bot(opts);
 
 bot.connect();
 
 bot.onConnect(function() {
-  this.join('your_room@conf.hipchat.com');
+  this.join('76745_labday-dashboardrelease@conf.hipchat.com');
 });
 
 bot.onError(function(text) {
@@ -23,3 +26,4 @@ bot.onError(function(text) {
 });
 
 bot.loadPlugin('response', require('./plugins/response'));
+bot.loadPlugin('weather', require('./plugins/weather'));
