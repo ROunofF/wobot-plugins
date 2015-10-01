@@ -7,8 +7,6 @@
 var Bot = require('wobot').Bot;
 var fs = require('fs');
 
-
-  //"jid": "76745_989081@chat.hipchat.com/nubot",
 var conf    = fs.readFileSync('./conf/bot.json');
 var opts    = JSON.parse(conf);
 
@@ -26,4 +24,5 @@ bot.onError(function(text) {
 });
 
 bot.loadPlugin('response', require('./plugins/response'));
-bot.loadPlugin('weather', require('./plugins/weather'));
+bot.loadPlugin('release', require('./plugins/release'));
+bot.loadPlugin('timer', require('./plugins/timer'));

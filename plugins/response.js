@@ -6,16 +6,11 @@
  */
 
 var responses = {
-	'cookie':'I LOVE COOKIES!!!',
-	'cookies':'I LOVE COOKIES!!!',
-	'ping':'pong',
-	'fireworks':'*pow *boom FIREWOKS!!!',
-	'wat':'Turn down for what?!',
-	'hello':'Hello!'
+	'help': 'Try !node lp-dac-02 for node information'
 };
 
 module.exports.load = function(bot) {
-  bot.onMessage(/.*/, respond);
+  bot.onMessage(/@nubot .*/i, respond);
 };
 
 var respond = function(channel, from, message) {
@@ -29,9 +24,6 @@ var respond = function(channel, from, message) {
 	  		self.message(channel, '@' + from.split(' ').join('') +  ' ' + keyword);
 	  		console.log(channel + ' : @' + from.split(' ').join('') + ' ' + keyword);
 		}
-	}
-	if( from == 'Guylain Carrier') {
-		this.message(channel, 'Trop de photes me donne la berlue!');
 	}
   return true;
 };
