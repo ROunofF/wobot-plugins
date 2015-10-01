@@ -6,6 +6,7 @@ var request = require('request');
 
 module.exports.load = function(bot) {
   bot.onMessage(/^\!node ([A-Za-z0-9-\.]+)$/i, node);
+  bot.onPrivateMessage(/^\!node ([A-Za-z0-9-\.]+)$/i, node);
 };
 
 var node = function(channel, from, message, matches) {

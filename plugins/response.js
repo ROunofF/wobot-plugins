@@ -6,7 +6,7 @@
  */
 
 var responses = {
-	'help': 'Try !node lp-dac-02 for node information'
+	'help': 'Try !node lp-dac-02 for node information'+"\n or !start !stop for timers"
 };
 
 module.exports.load = function(bot) {
